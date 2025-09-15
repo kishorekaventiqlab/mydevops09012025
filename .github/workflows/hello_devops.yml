@@ -1,0 +1,21 @@
+# Name of the GitHub Actions workflow
+name: Hello DevOps Workflow
+
+# Trigger the workflow when there's a push to the 'main' branch
+on:
+  push:
+    branches: [ main ]  # Only run this workflow for pushes to the 'main' branch
+
+jobs:
+  # Define a job named 'say-hello'
+  say-hello:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu runner provided by GitHub
+
+    steps:
+      # Step 1: Print a greeting message to the console
+      - name: Print Hello
+        run: echo "Hello DevOps"  # Outputs "Hello DevOps" to the workflow log
+
+      # Step 2: Print the current system date and time
+      - name: Print Current Date
+        run: date  # Outputs the current date and time
